@@ -126,8 +126,8 @@ async function main() {
 
         // Upload artist and track data to S3
         const s3 = new AWS.S3();
-        await uploadToS3(s3, validArtists, 'spotify-analysed-data', 'artists.json');
-        await uploadToS3(s3, formattedTracksWithDanceability, 'spotify-analysed-data', 'tracks.json');
+        await uploadToS3(s3, validArtists, process.env.BUCKET_NAME, 'artists.json');
+        await uploadToS3(s3, formattedTracksWithDanceability, process.env.BUCKET_NAME, 'tracks.json');
 
         console.log('Data uploaded to S3 successfully');
     } catch (error) {

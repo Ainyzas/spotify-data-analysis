@@ -5,13 +5,15 @@
     "main": "",
     "type": "module",
     "scripts": {
-        "start": "node dataIngest.js"
+        "start": "node dataIngest.js",
+        "transfer": "node dataTransfer.js"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "aws-sdk": "^2.1488.0",
         "dotenv": "^16.3.1",
-        "papaparse": "^5.4.1"
+        "papaparse": "^5.4.1",
+        "pg": "^8.11.3"
     }
 }
