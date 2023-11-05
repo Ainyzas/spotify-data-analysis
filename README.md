@@ -6,6 +6,9 @@ https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?
 https://www.kaggle.com/datasets/yamaerenay/spotify-dataset-19212020-600k-tracks?select=tracks.csv.
 
 ### Step 2
+Create an s3 bucket as well as a database with two tables - artists and tracks. The scripts for table creation are provided.
+
+### Step 3
 Create a .env file in the folder and fill in this information:
 AWS_ACCESS_KEY_ID=your IAM user access key
 AWS_SECRET_ACCESS_KEY=your IAM user secret access key
@@ -15,11 +18,11 @@ DB_NAME=your db name
 DB_USER=your db master username
 DB_PASSWORD=your db master password
 
-### Step 3
+### Step 4
 Run npm start, the script for dataIngest will run and process the datasets and upload them to the s3 bucket.
 
-### Step 4
+### Step 5
 Run npm run transfer, the script for dataTransfer will run and slowly upload dataset entries into the database.
 
-### Step 5
+### Step 6
 Use the provided SQL Scripts on a SQL client of your choosing.
