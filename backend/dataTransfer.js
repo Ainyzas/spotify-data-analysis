@@ -64,7 +64,7 @@ async function copyS3DataToTracks(bucket, key) {
                 popularity,
                 duration_ms,
                 explicit,
-                artists.replace('[', '{').replace(']', '}'),
+                artists.replace('[', '{').replace(']', '}').replace('"', '').replace('"', ''),
                 id_artists.replace('[', '{').replace(']', '}'),
                 danceability,
                 energy,
