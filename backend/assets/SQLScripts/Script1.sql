@@ -1,18 +1,11 @@
--- SQL script that combines track information (id, name, popularity, energy, and danceability) 
--- with the number of artist followers
+-- SQL script that takes track information (id, name, popularity, energy, and danceability) 
 
-CREATE VIEW tracks_with_followers AS
+CREATE OR REPLACE VIEW track_summary AS
 SELECT
-    tracks.id,
-    tracks.name,
-    tracks.popularity,
-    tracks.energy,
-    tracks.danceability,
-    artists.followers AS artist_followers
-FROM
-    tracks
-JOIN
-    artists ON artists.id = ANY (tracks.id_artists::VARCHAR[]);
+    id AS track_id,
+    "name" AS track_name,
+    popularity AS track_popularity,
+    energy,
+    danceability
+FROM tracks;
 
-SELECT *
-FROM tracks_with_followers;

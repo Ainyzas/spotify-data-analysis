@@ -9,9 +9,6 @@ SELECT
     danceability,
     artist_followers
 FROM
-    tracks_with_followers
+    track_summary
 WHERE
     artist_followers IS NOT NULL;
-    
-SELECT *
-FROM tracks_with_followers_filter;

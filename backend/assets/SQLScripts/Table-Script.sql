@@ -1,6 +1,6 @@
 CREATE TABLE artists (
     id VARCHAR PRIMARY KEY,
-    followers VARCHAR,
+    followers INT,
     genres TEXT[],
     name VARCHAR,
     popularity INT
