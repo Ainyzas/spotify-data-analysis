@@ -26,7 +26,6 @@ async function ingestAndFilterTracks(file) {
                 const artistIds = track.id_artists.split(',').map((id) => id.trim());
 
                 artistIds.forEach((id) => {
-                    id = id.replace(/['\[\]]/g, '');
                     validTrackArtistIdsSet.add(id);
                 });
             }
